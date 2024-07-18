@@ -17,7 +17,7 @@ const testRoutes = require('./router/testRoutes');
 const submitRoutes = require('./router/submitRoutes');
 
 const app = express();
-
+console.log("ji")
 // app.set('view engine', 'ejs');
 // app.set('views', path.join(__dirname, 'public'));
 
@@ -47,19 +47,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use(express.static(path.join(__dirname, 'public/assets')));
 app.use(express.static ('public'))
 
-// app.get('(/*)?', async (req, res, next) => {
-//   res.sendFile(path.join((path.join(__dirname, 'public')), 'index.html'));
-// });
-// app.use((req, res, next) => {
-//   if (/(.ico|.js|.css|.jpg|.png|.map)$/i.test(req.path)) {
-//       next();
-//   } else {
-//       res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
-//       res.header('Expires', '-1');
-//       res.header('Pragma', 'no-cache');
-//       res.sendFile(path.join(__dirname, 'public', 'index.html'));
-//   }
-// });
 
 //Cors
 app.use(cors({ credentials: true, origin: true, withCredentials: true }));
